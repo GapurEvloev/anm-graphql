@@ -16,7 +16,9 @@
     "graphql": "^15.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.4.1",
     "react-redux": "^8.0.5",
+    "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "redux-logger": "^3.0.6",
     "reselect": "^4.1.7",
@@ -28,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate": "graphql-codegen --config codegen.yml",
+    "generate:watch": "graphql-codegen --config codegen.yml --watch"
   },
   "eslintConfig": {
     "extends": [
@@ -49,7 +53,14 @@
     ]
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^2.16.2",
+    "@graphql-codegen/near-operation-file-preset": "^2.4.4",
+    "@graphql-codegen/typescript": "^2.8.6",
+    "@graphql-codegen/typescript-operations": "^2.5.11",
+    "@graphql-codegen/typescript-react-apollo": "^3.3.7",
     "@types/redux-logger": "^3.0.9",
-    "@types/styled-components": "^5.1.26"
+    "@types/styled-components": "^5.1.26",
+    "prettier": "^2.8.1",
+    "sass": "^1.57.1"
   }
 }
