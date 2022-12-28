@@ -1,0 +1,15 @@
+query GetAnimePage($page: Int!, $perPage: Int!) {
+    Page(page: $page, perPage: $perPage) {
+        media {
+            id
+            description
+            averageScore
+            title {
+                english
+            }
+            coverImage {
+                extraLarge
+            }
+        }
+    }
+}
