@@ -1,1 +1,1 @@
-export const API_URL = 'https://anilist.co/graphql';
+export const API_URL = 'https://graphql.anilist.co/';

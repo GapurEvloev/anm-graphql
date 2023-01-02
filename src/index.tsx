@@ -4,20 +4,26 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './index.css';
 import { ApolloProvider } from "@apollo/client";
 import client from "./apollo/client";
+import { ChakraProvider } from '@chakra-ui/react';
+import './index.css';
+import { BrowserRouter } from "react-router-dom";
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <ApolloProvider client={client}>
-        <App />
-      </ApolloProvider>
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <ApolloProvider client={client}>
+          <ChakraProvider>
+            <App />
+          </ChakraProvider>
+        </ApolloProvider>
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

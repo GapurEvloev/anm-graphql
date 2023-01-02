@@ -1,20 +1,17 @@
 import React from 'react';
-import AnimePage from "./components/AnimePage/AnimePage";
-import styled from "styled-components";
-
-const AppContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
+import MainLayout from "./Layouts/Layouts";
 
 function App() {
   return (
-    <AppContainer>
-      <AnimePage/>
-    </AppContainer>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<MainLayout/>}>
+          <Route path="/" element={<Home/>} />
+        </Route>
+      </Routes>
+    </div>
   );
 }
 

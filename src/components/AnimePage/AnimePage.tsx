@@ -6,7 +6,7 @@ const AnimePage: React.FC = () => {
   const {data, loading, error} = useGetAnimePageQuery({
     variables: {
       page: 1,
-      perPage: 4
+      perPage: 10
     }
   });
 
